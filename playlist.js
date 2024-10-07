@@ -5,3 +5,4 @@ const playlist = [
   "Sound of Voices",
   "Tearful Paradise",
 ];
+module.exports = playlist;
