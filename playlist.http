@@ -1,0 +1,33 @@
+@port=3000
+@host=http://localhost:{{port}}
+
+### GET /
+GET {{host}}/
+
+# Expected Response
+You've reached the Playlist API!
+
+### GET /playlist
+GET {{host}}/playlist
+
+# Expected response
+[
+  "Exhilarating Lights",
+  "Space for Disco",
+  "Warm Heart, Cold Dinner",
+  "Sound of Voices",
+  "Tearful Paradise",
+];
+
+### GET /playlist/:index
+GET {{host}}/playlist/2
+
+# Expected Response
+"Warm Heart, Cold Dinner"
+
+### GET /playlist/:index
+GET {{host}}/playlist/8
+
+# Expected Response
+404 Not Found
+That song does not exist in the playlist.
